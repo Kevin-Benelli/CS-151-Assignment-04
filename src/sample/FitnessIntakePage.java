@@ -9,7 +9,13 @@ import javafx.scene.text.TextAlignment;
 
 public class FitnessIntakePage {
 
+
     private String[] fitnessIntake = new String[]{"Name: ", "Age: ", "Fitness level: ", "Goals: "};
+    protected TextField nameField = new TextField();
+    protected TextField ageField = new TextField();
+    protected TextField fitnessLevelField = new TextField();
+    protected TextField goalsField = new TextField();
+
     protected Button fitnessIntakeToLoginBtn = new Button("Back to Login Page");
     protected Text fitnessIntakeHeader = new Text("Fitness Intake Page\n Lets start by getting your personalized metrics");
     protected  VBox fitnessIntakeRoot = new VBox();
@@ -21,18 +27,17 @@ public class FitnessIntakePage {
     public FitnessIntakePage(){
         fitnessIntakeHeader.setFont(new Font(18));
         fitnessIntakeHeader.setTextAlignment(TextAlignment.LEFT);
+        nameField.setPromptText("Name");
+        ageField.setPromptText("Age");
+        fitnessLevelField.setPromptText("Fitness level (beginner, intermediate, advanced)");
+        goalsField.setPromptText("Fitness goals");
     }
 
     /**
      * List all Fitness Intake field names on Fitness Intake Page
      */
     public void listFieldNames(){
-
-        for(String exercise : fitnessIntake){
-            TextField exerciseTextField = new TextField();
-            exerciseTextField.setPromptText(exercise);
-            fitnessIntakeRoot.getChildren().add(exerciseTextField);
-        }
+        fitnessIntakeRoot.getChildren().addAll(nameField, ageField, fitnessLevelField, goalsField);
     }
 
 

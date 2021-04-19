@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.application.Application;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -14,7 +13,8 @@ public class LoginPage {
     private String[] validCredentials = new String[]{"test123", "pass123"};
 
     protected TextField emailField = new TextField();
-    TextField passwordField = new TextField();
+    protected Text invalidCredentials = new Text();
+    protected TextField passwordField = new TextField();
     protected Label loginLbl = new Label("iWorkout - Login page");
     protected VBox loginRoot = new VBox(20); // spaces 20 px to avoid crowding
     protected Button loginBtn = new Button("Login");
@@ -48,8 +48,13 @@ public class LoginPage {
         if(userName.equals(validCredentials[0]) && passWord.equals(validCredentials[1])){
             isCredentialValid = true;
             System.out.println("username: " + userName + " | " + validCredentials[0] + "|" + "password: " + passWord + " | " + validCredentials[1] + "|");
+            invalidCredentials.setText("");
         }else{
             System.out.println(new Text("Invalid username password combination"));
+            if (invalidCredentials.getText().equals("")) {
+                invalidCredentials.setText("Invalid username password combination");
+                loginRoot.getChildren().add(invalidCredentials);
+            }
         }
 
         return isCredentialValid;
