@@ -60,7 +60,6 @@ public class Main extends Application {
             Button loginBtn = new Button("Login");
             loginBtn.setOnAction(event -> window.setScene(fitnessIntakeScene));
 
-
             // Sets event listeners for fitness, registration, and exercise btns
             fitnessIntakeToLoginBtn.setOnAction(event -> window.setScene(loginPageScene));
             registrationToLoginBtn.setOnAction(event -> window.setScene(loginPageScene));
