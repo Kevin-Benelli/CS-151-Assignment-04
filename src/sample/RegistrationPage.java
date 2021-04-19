@@ -10,8 +10,8 @@ import javafx.scene.text.Font;
 public class RegistrationPage {
 
     private String[] registrationFields = new String[]{"Set Email: ", "Set Password: "};
+    
     protected Button registrationToLoginBtn = new Button("Back to Login Page");
-
     protected Button registrationBtn = new Button("Register");
     protected Text registrationHeader = new Text("Registration Page - Sign Up Now!");
     protected VBox registrationRoot = new VBox();

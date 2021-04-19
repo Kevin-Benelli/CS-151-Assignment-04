@@ -30,7 +30,16 @@ public class Main extends Application {
             FitnessIntakePage FIPage = new FitnessIntakePage();
             ExercisePage exerPage = new ExercisePage();
 
-            lgnPage.loginBtn.setOnAction(event -> window.setScene(fitnessIntakeScene));
+            lgnPage.loginBtn.setOnAction(event -> {
+                String userName = lgnPage.emailField.getText();
+                String userPass = lgnPage.passwordField.getText();
+                lgnPage.loginRoot.getChildren().getClass();
+                Boolean isCredentialValid = lgnPage.validateLoginAttempt(userName, userPass);
+                if(isCredentialValid){
+                    window.setScene(fitnessIntakeScene);
+                }
+
+            });
 
             // Sets event listeners for fitness, registration, and exercise btns
             FIPage.fitnessIntakeToLoginBtn.setOnAction(event -> window.setScene(loginPageScene));
