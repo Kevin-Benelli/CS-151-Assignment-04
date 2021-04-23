@@ -1,10 +1,13 @@
 package sample;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
@@ -24,9 +27,13 @@ public class LoginPage {
      */
     public LoginPage(){
         loginLbl.setFont(new Font(18));
+        loginLbl.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        loginLbl.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
         loginLbl.setTextAlignment(TextAlignment.CENTER);
         emailField.setPromptText("email");
+            emailField.setMaxWidth(300);
         passwordField.setPromptText("password");
+            passwordField.setMaxWidth(300);
     }
 
     /**

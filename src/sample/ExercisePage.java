@@ -4,13 +4,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
 public class ExercisePage {
 
     private String[] allWorkouts = new String[]{"Push Ups", "Sit Ups", "Crunches", "Pull-Ups", "Tricep Dips"};
-//    private String[] begginerWorkouts = new String[]{"Kneeled Push-ups: 10 reps", "Tricep Dips"};
+//    private String[] beginnerWorkouts = new String[]{"Kneeled Push-ups: 10 reps", "Tricep Dips"};
 //    private String[] intermediateWorkouts = new String[]{"Pull-Ups", "ex2"};
 //    private String[] advanceWorkouts = new String[]{"Kneeled Push-ups: 10 reps", "Tricep Dips"};
 
@@ -24,6 +25,8 @@ public class ExercisePage {
      */
     public ExercisePage(){
         exercisePageHeader.setFont(new Font(18));
+        exercisePageHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        exercisePageHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
         exercisePageHeader.setTextAlignment(TextAlignment.CENTER);
     }
 

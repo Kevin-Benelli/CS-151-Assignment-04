@@ -1,6 +1,6 @@
 package sample;
 
-import javafx.application.Application;;
+import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -59,7 +59,7 @@ public class Main extends Application {
             regPage.registrationRoot.getChildren().addAll(regPage.registrationHeader, regPage.registrationToLoginBtn);
 
             // Create Fitness Intake Layout
-            FIPage.fitnessIntakeRoot.getChildren().addAll(FIPage.fitnessIntakeHeader, FIPage.fitnessIntakeToLoginBtn, exerPage.exerciseBtn);
+            FIPage.fitnessIntakeRoot.getChildren().addAll(FIPage.fitnessIntakeHeader, FIPage.fitnessIntakeInfo, FIPage.fitnessIntakeToLoginBtn, exerPage.exerciseBtn);
 
             // List all UI field names for login, registration, fitness intake, and exercise pages
             lgnPage.listFieldNames();
