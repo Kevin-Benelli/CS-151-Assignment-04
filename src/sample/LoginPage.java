@@ -29,7 +29,7 @@ public class LoginPage {
         loginLbl.setFont(new Font(18));
         loginLbl.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
         loginLbl.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
-        loginLbl.setTextAlignment(TextAlignment.CENTER);
+        loginLbl.setTextAlignment(TextAlignment.LEFT);
         emailField.setPromptText("email");
             emailField.setMaxWidth(300);
         passwordField.setPromptText("password");

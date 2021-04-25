@@ -21,7 +21,7 @@ public class FitnessIntakePage {
 
     protected Button fitnessIntakeToLoginBtn = new Button("Back to Login Page");
     protected Label fitnessIntakeHeader = new Label("Fitness Intake Page");
-    protected Text fitnessIntakeInfo = new Text("Lets start by getting your personalized metrics");
+    protected Text fitnessIntakeInfo = new Text("Lets start by getting your personalized metrics \n");
     protected  VBox fitnessIntakeRoot = new VBox();
     private int fitnessLevel = 0;
 
