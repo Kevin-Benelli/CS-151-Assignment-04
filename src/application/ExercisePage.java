@@ -1,4 +1,4 @@
-package sample;
+package application;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -25,6 +25,10 @@ public class ExercisePage {
     public ExercisePage(){
         exercisePageHeader.setFont(new Font(18));
         exercisePageHeader.setTextAlignment(TextAlignment.CENTER);
+        exerciseToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
+        exercisePageHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
+        exerciseBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
+
     }
 
 
@@ -37,5 +41,8 @@ public class ExercisePage {
             exerciseRoot.getChildren().add(new Label(exercise));
         }
     }
+
+
+
 
 }

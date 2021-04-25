@@ -1,4 +1,4 @@
-package sample;
+package application;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -10,7 +10,7 @@ import javafx.scene.text.Font;
 public class RegistrationPage {
 
     private String[] registrationFields = new String[]{"Set Email: ", "Set Password: "};
-    
+
     protected Button registrationToLoginBtn = new Button("Back to Login Page");
     protected Button registrationBtn = new Button("Register");
     protected Text registrationHeader = new Text("Registration Page - Sign Up Now!");
@@ -22,6 +22,9 @@ public class RegistrationPage {
     public RegistrationPage(){
         registrationHeader.setFont(new Font(18));
         registrationHeader.setTextAlignment(TextAlignment.LEFT);
+        registrationHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
+        registrationBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
+        registrationToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
     }
 
     /**
@@ -34,4 +37,6 @@ public class RegistrationPage {
             registrationRoot.getChildren().add(exerciseTextField);
         }
     }
+
+
 }

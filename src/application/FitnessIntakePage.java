@@ -1,4 +1,4 @@
-package sample;
+package application;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -31,6 +31,12 @@ public class FitnessIntakePage {
         ageField.setPromptText("Age");
         fitnessLevelField.setPromptText("Fitness level (beginner, intermediate, advanced)");
         goalsField.setPromptText("Fitness goals");
+        nameField.setStyle("-fx-font: normal bold 20px 'serif' ");
+        ageField.setStyle("-fx-font: normal bold 20px 'serif' ");
+        fitnessLevelField.setStyle("-fx-font: normal bold 20px 'serif' ");
+        goalsField.setStyle("-fx-font: normal bold 20px 'serif' ");
+        fitnessIntakeToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
+        fitnessIntakeHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
     }
 
     /**
@@ -39,6 +45,8 @@ public class FitnessIntakePage {
     public void listFieldNames(){
         fitnessIntakeRoot.getChildren().addAll(nameField, ageField, fitnessLevelField, goalsField);
     }
+
+
 
 
 }

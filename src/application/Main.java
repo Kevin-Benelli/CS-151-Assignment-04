@@ -1,8 +1,12 @@
-package sample;
+package application;
 
-import javafx.application.Application;;
+import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+
+
+
 
 
 public class Main extends Application {
@@ -73,8 +77,8 @@ public class Main extends Application {
             // Sets scenes with layout and dimensions
             loginPageScene = new Scene(lgnPage.loginRoot, 400, 400);
             registrationScene = new Scene(regPage.registrationRoot, 400, 400);
-            fitnessIntakeScene = new Scene(FIPage.fitnessIntakeRoot, 400, 400);
-            exerciseScene = new Scene(exerPage.exerciseRoot, 400, 400);
+            fitnessIntakeScene = new Scene(FIPage.fitnessIntakeRoot, 600, 600);
+            exerciseScene = new Scene(exerPage.exerciseRoot, 600, 600);
 
             // Set first screen to login page
             window.setScene(loginPageScene);
