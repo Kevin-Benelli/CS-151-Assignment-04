@@ -66,6 +66,8 @@ public class Main extends Application {
             regPage.listFieldNames();
             FIPage.listFieldNames();
             exerPage.listExercises();
+            //exerPage.listIntExercises();
+            //exerPage.listAdvExcercises();
 
             // Create Login Page
             lgnPage.loginRoot.getChildren().addAll(regPage.registrationBtn, lgnPage.loginBtn); // Setting Login page with login lbl and registration and login buttons
