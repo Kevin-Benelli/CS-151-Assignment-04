@@ -1,9 +1,12 @@
-package application;
+package sample;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
@@ -13,33 +16,32 @@ public class FitnessIntakePage {
     private String[] fitnessIntake = new String[]{"Name: ", "Age: ", "Fitness level: ", "Goals: "};
     protected TextField nameField = new TextField();
     protected TextField ageField = new TextField();
-    //protected TextField fitnessLevelField = new TextField();
+    protected TextField fitnessLevelField = new TextField();
     protected TextField goalsField = new TextField();
 
-    protected ComboBox fitnessLevelField = new ComboBox();
-
     protected Button fitnessIntakeToLoginBtn = new Button("Back to Login Page");
-    protected Text fitnessIntakeHeader = new Text("Fitness Intake Page\n Lets start by getting your personalized metrics");
+    protected Label fitnessIntakeHeader = new Label("Fitness Intake Page");
+    protected Text fitnessIntakeInfo = new Text("Lets start by getting your personalized metrics \n");
     protected  VBox fitnessIntakeRoot = new VBox();
     private int fitnessLevel = 0;
-
 
     /**
      * Initializing Constructor sets Fitness Intake page header style
      */
     public FitnessIntakePage(){
-        fitnessIntakeHeader.setFont(new Font(18));
+        //fitnessIntakeHeader.setFont(new Font(18));
+        fitnessIntakeHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        fitnessIntakeHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
         fitnessIntakeHeader.setTextAlignment(TextAlignment.LEFT);
+        fitnessIntakeInfo.setFont(new Font(18));
         nameField.setPromptText("Name");
+            nameField.setMaxWidth(300);
         ageField.setPromptText("Age");
+            ageField.setMaxWidth(300);
         fitnessLevelField.setPromptText("Fitness level (beginner, intermediate, advanced)");
+            fitnessLevelField.setMaxWidth(300);
         goalsField.setPromptText("Fitness goals");
-        nameField.setStyle("-fx-font: normal bold 20px 'serif' ");
-        ageField.setStyle("-fx-font: normal bold 20px 'serif' ");
-        fitnessLevelField.setStyle("-fx-font: normal bold 20px 'serif' ");
-        goalsField.setStyle("-fx-font: normal bold 20px 'serif' ");
-        fitnessIntakeToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-        fitnessIntakeHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
+            goalsField.setMaxWidth(300);
 
     }
 
@@ -47,30 +49,8 @@ public class FitnessIntakePage {
      * List all Fitness Intake field names on Fitness Intake Page
      */
     public void listFieldNames(){
-        fitnessIntakeRoot.getChildren().addAll(nameField, ageField);
+        fitnessIntakeRoot.getChildren().addAll(nameField, ageField, fitnessLevelField, goalsField);
     }
-
-    /**
-     * Fitness Level ComboBox
-     */
-/*    public void fitLevel(){
-        //fitnessIntakeRoot.getChildren().add(new Label("Select Fitness Level:"));
-        //fitnessIntakeRoot.getChildren().add(comboBox);
-        ComboBox<Planet> comboBox = new ComboBox<Level>();
-        ObservableList<Level> list = LevelList.getLevelList();
-
-        comboBox.setItems(list);
-        comboBox.getSelectionModel().select(1);
-
-        fitnessIntakeRoot.setPadding(new Insets(5));
-        fitnessIntakeRoot.setHgap(5);
-
-        fitnessIntakeRoot.getChildren().add(new Label("Select Fitness Level:"));
-        fitnessIntakeRoot.getChildren().add(comboBox);
-
-    }*/
-
-
 
 
 }

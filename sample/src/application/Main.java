@@ -1,12 +1,8 @@
-package application;
-	
+package sample;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-
-
- 
 
 
 public class Main extends Application {
@@ -63,13 +59,15 @@ public class Main extends Application {
             regPage.registrationRoot.getChildren().addAll(regPage.registrationHeader, regPage.registrationToLoginBtn);
 
             // Create Fitness Intake Layout
-            FIPage.fitnessIntakeRoot.getChildren().addAll(FIPage.fitnessIntakeHeader, FIPage.fitnessIntakeToLoginBtn, exerPage.exerciseBtn);
+            FIPage.fitnessIntakeRoot.getChildren().addAll(FIPage.fitnessIntakeHeader, FIPage.fitnessIntakeInfo, FIPage.fitnessIntakeToLoginBtn, exerPage.exerciseBtn);
 
             // List all UI field names for login, registration, fitness intake, and exercise pages
             lgnPage.listFieldNames();
             regPage.listFieldNames();
             FIPage.listFieldNames();
             exerPage.listExercises();
+            //exerPage.listIntExercises();
+            //exerPage.listAdvExcercises();
 
             // Create Login Page
             lgnPage.loginRoot.getChildren().addAll(regPage.registrationBtn, lgnPage.loginBtn); // Setting Login page with login lbl and registration and login buttons
@@ -77,9 +75,9 @@ public class Main extends Application {
             // Sets scenes with layout and dimensions
             loginPageScene = new Scene(lgnPage.loginRoot, 400, 400);
             registrationScene = new Scene(regPage.registrationRoot, 400, 400);
-            fitnessIntakeScene = new Scene(FIPage.fitnessIntakeRoot, 600, 600);
-            exerciseScene = new Scene(exerPage.exerciseRoot, 600, 600);
-             
+            fitnessIntakeScene = new Scene(FIPage.fitnessIntakeRoot, 400, 400);
+            exerciseScene = new Scene(exerPage.exerciseRoot, 400, 400);
+
             // Set first screen to login page
             window.setScene(loginPageScene);
             window.setTitle("iWorkout");

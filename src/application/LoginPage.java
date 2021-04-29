@@ -1,8 +1,10 @@
-package application;
+package sample;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -20,30 +22,25 @@ public class LoginPage {
     protected VBox loginRoot = new VBox(20); // spaces 20 px to avoid crowding
     protected Button loginBtn = new Button("Login");
 
-
     /**
      * Initializing Constructor sets Login page header style
      */
     public LoginPage(){
         loginLbl.setFont(new Font(18));
-        loginLbl.setTextAlignment(TextAlignment.CENTER);
-        //loginLbl.setStyle("-fx-font: normal bold 20px 'serif' ");
-        loginLbl.setStyle("-fx-background-color: #88BDC4; ");
-        loginLbl.setFont(Font.font("sans serif", FontWeight.BOLD, 40));
+        loginLbl.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        loginLbl.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
+        loginLbl.setTextAlignment(TextAlignment.LEFT);
         emailField.setPromptText("email");
-        emailField.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
+            emailField.setMaxWidth(300);
         passwordField.setPromptText("password");
-        passwordField.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-        loginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-
-
+            passwordField.setMaxWidth(300);
     }
 
     /**
      * List all login field names on Login Page
      */
     public void listFieldNames(){
-        loginRoot.getChildren().addAll(emailField, passwordField);
+            loginRoot.getChildren().addAll(emailField, passwordField);
     }
 
     /**
@@ -60,7 +57,6 @@ public class LoginPage {
             System.out.println("username: " + userName + " | " + validCredentials[0] + "|" + "password: " + passWord + " | " + validCredentials[1] + "|");
             invalidCredentials.setText("");
         }else{
-
             System.out.println(new Text("Invalid username password combination"));
             if (invalidCredentials.getText().equals("")) {
                 invalidCredentials.setText("Invalid username password combination");
@@ -70,6 +66,4 @@ public class LoginPage {
 
         return isCredentialValid;
     }
-
-
 }
