@@ -4,18 +4,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
 public class ExercisePage {
 
-    private String[] allWorkouts = new String[]{"Push Ups", "Sit Ups", "Crunches", "Pull-Ups", "Tricep Dips"};
+    private String[] allWorkouts = new String[]{"Kneeled Push Ups - 10 reps", "\n", "Sit Ups - 10 reps", "\n", "Crunches - 10 reps", "\n", "Pull-Ups - 5 reps", "\n", "Tricep Dips - 10 reps", "\n"};
 //    private String[] begginerWorkouts = new String[]{"Kneeled Push-ups: 10 reps", "Tricep Dips"};
 //    private String[] intermediateWorkouts = new String[]{"Pull-Ups", "ex2"};
 //    private String[] advanceWorkouts = new String[]{"Kneeled Push-ups: 10 reps", "Tricep Dips"};
 
     protected Button exerciseToLoginBtn = new Button("Back to Login Page");
-    protected Text exercisePageHeader = new Text("Your Exercises");
+    protected Label exercisePageHeader = new Label("Your Exercises");
     protected Button exerciseBtn = new Button("Generate Exercises");
     protected VBox exerciseRoot = new VBox();
 
@@ -23,10 +24,11 @@ public class ExercisePage {
      * Initializing Constructor sets Exercise page header style
      */
     public ExercisePage(){
-        exercisePageHeader.setFont(new Font(18));
+        //exercisePageHeader.setFont(new Font(18));
         exercisePageHeader.setTextAlignment(TextAlignment.CENTER);
-        exerciseToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-        exercisePageHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
+        //exerciseToLoginBtn.setStyle("-fx-background-color: #88BDC4;");
+        exercisePageHeader.setStyle("-fx-background-color: #88BDC4; ");
+        exercisePageHeader.setFont(Font.font("sans serif", FontWeight.BOLD, 40));
         exerciseBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
 
     }

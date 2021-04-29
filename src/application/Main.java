@@ -63,7 +63,7 @@ public class Main extends Application {
             regPage.registrationRoot.getChildren().addAll(regPage.registrationHeader, regPage.registrationToLoginBtn);
 
             // Create Fitness Intake Layout
-            FIPage.fitnessIntakeRoot.getChildren().addAll(FIPage.fitnessIntakeHeader, FIPage.fitnessIntakeToLoginBtn, exerPage.exerciseBtn);
+            FIPage.fitnessIntakeRoot.getChildren().addAll(FIPage.fitnessIntakeHeader, FIPage.fitnessIntakeDetails, FIPage.fitnessIntakeToLoginBtn, exerPage.exerciseBtn);
 
             // List all UI field names for login, registration, fitness intake, and exercise pages
             lgnPage.listFieldNames();

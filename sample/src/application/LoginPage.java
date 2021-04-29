@@ -24,9 +24,12 @@ public class LoginPage {
      * Initializing Constructor sets Login page header style
      */
     public LoginPage(){
-        loginLbl.setFont(new Font(18));
+        //loginLbl.setFont(new Font(18));
         loginLbl.setTextAlignment(TextAlignment.CENTER);
-        loginLbl.setStyle("-fx-font: normal bold 20px 'serif' ");
+        //loginLbl.setStyle("-fx-font: normal bold 20px 'serif' ");
+        loginLbl.setStyle("-fx-background-color: #88BDC4; ");
+        loginLbl.setFont(Font.font("sans serif", FontWeight.BOLD, 40));
+
         emailField.setPromptText("email");
         emailField.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
         passwordField.setPromptText("password");
