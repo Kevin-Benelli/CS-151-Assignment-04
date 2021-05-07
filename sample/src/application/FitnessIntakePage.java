@@ -16,7 +16,7 @@ public class FitnessIntakePage {
     private String[] fitnessIntake = new String[]{"Name: ", "Age: ", "Fitness level: ", "Goals: "};
     protected TextField nameField = new TextField();
     protected TextField ageField = new TextField();
-    protected TextField fitnessLevelField = new TextField();
+    protected ComboBox fitnessLevelField;
     protected TextField goalsField = new TextField();
 
     protected Button fitnessIntakeToLoginBtn = new Button("Back to Login Page");
@@ -38,10 +38,19 @@ public class FitnessIntakePage {
             nameField.setMaxWidth(300);
         ageField.setPromptText("Age");
             ageField.setMaxWidth(300);
-        fitnessLevelField.setPromptText("Fitness level (beginner, intermediate, advanced)");
+
+        fitnessLevelField = new FXCollections.observableArrayList(
+                "Option 1",
+                "Option 2",
+                "Option 3"
+        );
+
+//            fitnessLevelField.setPromptText("Fitness level (beginner, intermediate, advanced)");
             fitnessLevelField.setMaxWidth(300);
         goalsField.setPromptText("Fitness goals");
             goalsField.setMaxWidth(300);
+
+
 
     }
 

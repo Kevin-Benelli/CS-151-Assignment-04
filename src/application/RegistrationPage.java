@@ -24,7 +24,6 @@ public class RegistrationPage {
     public RegistrationPage(){
         registrationHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
         registrationHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
-        //registrationHeader.setFont(new Font(18));
         registrationHeader.setTextAlignment(TextAlignment.LEFT);
         registrationHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
         registrationBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
@@ -41,6 +40,5 @@ public class RegistrationPage {
             registrationRoot.getChildren().add(exerciseTextField);
         }
     }
-
 
 }

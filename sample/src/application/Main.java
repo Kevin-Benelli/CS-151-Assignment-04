@@ -65,7 +65,7 @@ public class Main extends Application {
             lgnPage.listFieldNames();
             regPage.listFieldNames();
             FIPage.listFieldNames();
-            exerPage.listExercises();
+//            exerPage.listExercises();
             //exerPage.listIntExercises();
             //exerPage.listAdvExcercises();
 
