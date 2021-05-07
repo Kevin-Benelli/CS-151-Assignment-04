@@ -77,11 +77,28 @@ public class Main extends Application {
 
             FIPage.exerciseBtn.setOnAction(event -> {
                 System.out.print(FIPage.getFitnessLevel().toUpperCase().equals("") + " | " + FIPage.getFitnessLevel().toUpperCase() + " |    " + FIPage.getFitnessGoal().toUpperCase() + " bool: " + (!FIPage.getFitnessLevel().toUpperCase().equals("SELECT FITNESS LEVEL") && !FIPage.getFitnessGoal().toLowerCase().equals("SELECT FITNESS GOAL"))+ "\n");
+                // Create Exercise Layout
+
+//                beginnerBuildMuscle.exerciseRoot.getChildren().addAll(beginnerBuildMuscle.exercisePageHeader, beginnerBuildMuscle.backToFIPageBtn);
+//                intermediateBuildMuscle.exerciseRoot.getChildren().addAll(intermediateBuildMuscle.exercisePageHeader, intermediateBuildMuscle.backToFIPageBtn);
+//                advancedBuildMuscle.exerciseRoot.getChildren().addAll(advancedBuildMuscle.exercisePageHeader, advancedBuildMuscle.backToFIPageBtn);
+//                beginnerWeightLoss.exerciseRoot.getChildren().addAll(beginnerWeightLoss.exercisePageHeader, beginnerWeightLoss.backToFIPageBtn);
+//                intermediateWeightLoss.exerciseRoot.getChildren().addAll(intermediateWeightLoss.exercisePageHeader, intermediateWeightLoss.backToFIPageBtn);
+//                advancedWeightLoss.exerciseRoot.getChildren().addAll(advancedWeightLoss.exercisePageHeader, advancedWeightLoss.backToFIPageBtn);
+
+                beginnerBuildMuscle.listExercises();
+                intermediateBuildMuscle.listExercises();
+                advancedBuildMuscle.listExercises();
+                beginnerWeightLoss.listExercises();
+                intermediateWeightLoss.listExercises();
+                advancedWeightLoss.listExercises();
 
                 // If user does not select fitness level and goal, we will not set new scene
                 if(!FIPage.getFitnessLevel().toUpperCase().equals("SELECT FITNESS LEVEL") && !FIPage.getFitnessGoal().toUpperCase().equals("SELECT FITNESS GOAL")) {
                     Scene customWorkoutScene = generateWorkoutPlan(FIPage, FIPage.getFitnessGoal(), FIPage.getFitnessLevel());
-                        window.setScene(customWorkoutScene);
+                    // Create Fitness Intake Layout
+
+                    window.setScene(customWorkoutScene);
                 }
 
             });
