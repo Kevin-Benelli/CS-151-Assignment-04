@@ -16,6 +16,8 @@ public class AdvancedWeightLoss implements ExerciseInt{
     @Override
     public void listExercises() {
         generateRandomExercises();
+        exerciseRoot.getChildren().clear();
+        exerciseRoot.getChildren().add(backToFIPageBtn);
 
         if(exerciseList.length > 0){
             // Lists Advanced workouts on Exercise Page

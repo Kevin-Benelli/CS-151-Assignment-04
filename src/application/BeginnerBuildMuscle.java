@@ -16,7 +16,8 @@ public class BeginnerBuildMuscle implements ExerciseInt{
     public void listExercises() {
         generateRandomExercises();
 
-//        VBox exerciseRoot = new VBox();
+        exerciseRoot.getChildren().clear();
+        exerciseRoot.getChildren().add(backToFIPageBtn);
         if(exerciseList.length > 0){
             // Lists Advanced workouts on Exercise Page
             for(String exercise : exerciseList) {

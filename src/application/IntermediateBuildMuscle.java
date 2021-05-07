@@ -11,10 +11,13 @@ public class IntermediateBuildMuscle implements ExerciseInt{
 
     VBox exerciseRoot = new VBox();
     Button backToFIPageBtn = new Button("Back to Fitness Intake Page");
+
     @Override
     public void listExercises() {
         generateRandomExercises();
 
+        exerciseRoot.getChildren().clear();
+        exerciseRoot.getChildren().add(backToFIPageBtn);
         // Lists Advanced workouts on Exercise Page
         for(String exercise : exerciseList) {
             exerciseRoot.getChildren().add(new Label(exercise));

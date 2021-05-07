@@ -15,6 +15,8 @@ public class AdvancedBuildMuscle implements ExerciseInt {
     @Override
     public void listExercises() {
         generateRandomExercises();
+        exerciseRoot.getChildren().clear();
+        exerciseRoot.getChildren().add(backToFIPageBtn);
 
         if(exerciseList.length > 0){
             // Lists Beginner workouts on Exercise Page

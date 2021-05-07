@@ -15,6 +15,8 @@ public class IntermediateWeightLoss implements ExerciseInt{
     public void listExercises() {
         generateRandomExercises();
 
+        exerciseRoot.getChildren().clear();
+        exerciseRoot.getChildren().add(backToFIPageBtn);
         // Lists Advanced workouts on Exercise Page
         for(String exercise : exerciseList) {
             exerciseRoot.getChildren().add(new Label(exercise));
@@ -27,7 +29,7 @@ public class IntermediateWeightLoss implements ExerciseInt{
         int seed = randInt.nextInt(max);
 
         for(int i = 0; i < 10; i++){
-            System.out.println(allWorkouts[randInt.nextInt(seed)]);
+//            System.out.println(allWorkouts[randInt.nextInt(seed)]);
             //Generate random int value from 1 to allWorkouts length
             exerciseList[i] = allWorkouts[randInt.nextInt(seed)];
         }
