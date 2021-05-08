@@ -9,7 +9,7 @@ public interface ExerciseInt {
         VBox exerciseRoot = new VBox();
         Button BackToFIPageBtn = new Button("Back to Fitness Intake Page");
         Label exercisePageHeader = new Label("Your Exercises");
-        String[] allWorkouts = {"100 Jumping Jacks","40 Lunges","40 Squats","100 High Knees","40 Butt Kickers",
+        String[] workouts = {"100 Jumping Jacks","40 Lunges","40 Squats","100 High Knees","40 Butt Kickers",
                 "20 Side Lunges","100 Crunches","10 Leg Lifts","30sec. Sprint","30sec. Calf Raises","Exercise20",
                 "20 Glute Bridges","30 V-ups","1min. Plank","50 Russian Twists","50 Crunches","20 Mountain Climbers",
                 "30 Flutter Kicks","20 Jump Squats","20 Burpees","20 Box Jumps","20 Leg Raises","20 Tricep Dips",

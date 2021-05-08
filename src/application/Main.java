@@ -20,6 +20,8 @@ public class Main extends Application {
     public void start(Stage primaryStage){
         try{
             window = primaryStage;
+            window.setWidth(800);
+            window.setHeight(500);
 
             /* TODO:
               1.) ADD METHODS FOR:
@@ -107,7 +109,7 @@ public class Main extends Application {
             beginnerBuildMuscle.exerciseRoot.getChildren().addAll(beginnerBuildMuscle.exercisePageHeader, beginnerBuildMuscle.backToFIPageBtn);
             intermediateBuildMuscle.exerciseRoot.getChildren().addAll(intermediateBuildMuscle.exercisePageHeader, intermediateBuildMuscle.backToFIPageBtn);
             advancedBuildMuscle.exerciseRoot.getChildren().addAll(advancedBuildMuscle.exercisePageHeader, advancedBuildMuscle.backToFIPageBtn);
-            beginnerWeightLoss.exerciseRoot.getChildren().addAll(beginnerWeightLoss.exercisePageHeader, beginnerWeightLoss.backToFIPageBtn);
+            beginnerWeightLoss.exerciseRoot.getChildren().addAll(beginnerWeightLoss.exercisePageHeader, beginnerWeightLoss.backToFIPageBtn, beginnerWeightLoss.begWLheader);
             intermediateWeightLoss.exerciseRoot.getChildren().addAll(intermediateWeightLoss.exercisePageHeader, intermediateWeightLoss.backToFIPageBtn);
             advancedWeightLoss.exerciseRoot.getChildren().addAll(advancedWeightLoss.exercisePageHeader, advancedWeightLoss.backToFIPageBtn);
 

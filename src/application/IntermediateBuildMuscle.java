@@ -24,14 +24,14 @@ public class IntermediateBuildMuscle implements ExerciseInt{
         }
     }
     public void generateRandomExercises(){
-        int max = allWorkouts.length;
+        int max = workouts.length;
         Random randInt = new Random();
         int seed = randInt.nextInt(max);
 
         for(int i = 0; i < 10; i++){
-            System.out.println(allWorkouts[randInt.nextInt(seed)]);
+            System.out.println(workouts[randInt.nextInt(seed)]);
             //Generate random int value from 1 to allWorkouts length
-            exerciseList[i] = allWorkouts[randInt.nextInt(seed)];
+            exerciseList[i] = workouts[randInt.nextInt(seed)];
         }
     }
 }

@@ -1,6 +1,7 @@
 package application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Pos;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -67,6 +68,7 @@ public class FitnessIntakePage {
     }
 
     private void setStyles() {
+        fitnessIntakeRoot.setAlignment(Pos.CENTER);
         fitnessIntakeHeader.setTextAlignment(TextAlignment.LEFT);
         fitnessIntakeHeader.setStyle("-fx-background-color: #88BDC4; ");
         fitnessIntakeHeader.setFont(Font.font("sans serif", FontWeight.BOLD, 40));

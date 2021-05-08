@@ -26,10 +26,11 @@ public class LoginPage {
      * Initializing Constructor sets Login page header style
      */
     public LoginPage(){
+        loginRoot.setAlignment(Pos.CENTER);
         loginLbl.setFont(new Font(18));
         loginLbl.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
-        loginLbl.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
-        loginLbl.setTextAlignment(TextAlignment.LEFT);
+        loginLbl.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4; -fx-text-alignment: center;");
+        //loginLbl.setTextAlignment(TextAlignment.CENTER);
         emailField.setPromptText("email");
             emailField.setMaxWidth(300);
         passwordField.setPromptText("password");
