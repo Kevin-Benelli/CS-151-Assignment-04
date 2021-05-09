@@ -26,7 +26,7 @@ public class RegistrationPage {
         registrationHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
         registrationHeader.setTextAlignment(TextAlignment.LEFT);
         registrationHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
-        registrationBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
+        //registrationBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
         registrationToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
     }
 

@@ -4,12 +4,16 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+import javafx.scene.layout.StackPane;
 
 public class LoginPage {
 
@@ -18,23 +22,36 @@ public class LoginPage {
     protected TextField emailField = new TextField();
     protected Text invalidCredentials = new Text();
     protected TextField passwordField = new TextField();
-    protected Label loginLbl = new Label("iWorkout - Login page");
+    protected Label loginLbl = new Label("iWorkout");
     protected VBox loginRoot = new VBox(20); // spaces 20 px to avoid crowding
     protected Button loginBtn = new Button("Login");
+
+    //stackpane to add background image
+   /* protected StackPane stackPane = new StackPane();
+    protected Image image = new Image(getClass().getResourceAsStream("/application/pullups.jpeg"));
+    protected ImageView imageView = new ImageView(image);
+    protected Button loginBtn = new Button("Login");*/
 
     /**
      * Initializing Constructor sets Login page header style
      */
     public LoginPage(){
         loginRoot.setAlignment(Pos.CENTER);
+        //loginRoot.styleProperty().set("-fx-background-image: url(\"pullups.jpeg\");");
         loginLbl.setFont(new Font(18));
-        loginLbl.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
-        loginLbl.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4; -fx-text-alignment: center;");
+        loginLbl.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        loginLbl.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
         //loginLbl.setTextAlignment(TextAlignment.CENTER);
         emailField.setPromptText("email");
             emailField.setMaxWidth(300);
         passwordField.setPromptText("password");
             passwordField.setMaxWidth(300);
+
+        //stackPane.getChildren().addAll(imageView, loginBtn);
+        String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
+        loginRoot.setStyle("-fx-background-image: url('" + image + "'); " +
+                "-fx-background-position: center center; " +
+                "-fx-background-repeat: stretch;" + "-fx-background-size: 800px 500px;" + "-fx-background-color:transparent");
     }
 
     /**
@@ -64,7 +81,8 @@ public class LoginPage {
                 loginRoot.getChildren().add(invalidCredentials);
             }
         }
-
+        invalidCredentials.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
+        invalidCredentials.setFill(Color.WHITE);
         return isCredentialValid;
     }
 }

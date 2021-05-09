@@ -106,7 +106,7 @@ public class Main extends Application {
             });
 
             // Create Exercise Layout
-            beginnerBuildMuscle.exerciseRoot.getChildren().addAll(beginnerBuildMuscle.exercisePageHeader, beginnerBuildMuscle.backToFIPageBtn);
+            beginnerBuildMuscle.exerciseRoot.getChildren().addAll(beginnerBuildMuscle.begBMLabel, beginnerBuildMuscle.backToFIPageBtn);
             intermediateBuildMuscle.exerciseRoot.getChildren().addAll(intermediateBuildMuscle.exercisePageHeader, intermediateBuildMuscle.backToFIPageBtn);
             advancedBuildMuscle.exerciseRoot.getChildren().addAll(advancedBuildMuscle.exercisePageHeader, advancedBuildMuscle.backToFIPageBtn);
             beginnerWeightLoss.exerciseRoot.getChildren().addAll(beginnerWeightLoss.exercisePageHeader, beginnerWeightLoss.backToFIPageBtn, beginnerWeightLoss.begWLheader);

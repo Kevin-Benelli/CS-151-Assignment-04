@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
@@ -32,7 +33,7 @@ public class FitnessIntakePage {
     protected Button fitnessIntakeToLoginBtn = new Button("Back to Login Page \n");
     protected Label fitnessIntakeHeader = new Label("Fitness Intake Page\n");
     protected Label fitnessIntakeDetails = new Label("Lets start by getting your personalized metrics\n");
-    protected  VBox fitnessIntakeRoot = new VBox();
+    protected  VBox fitnessIntakeRoot = new VBox(20);
 
 
     /**
@@ -70,14 +71,21 @@ public class FitnessIntakePage {
     private void setStyles() {
         fitnessIntakeRoot.setAlignment(Pos.CENTER);
         fitnessIntakeHeader.setTextAlignment(TextAlignment.LEFT);
-        fitnessIntakeHeader.setStyle("-fx-background-color: #88BDC4; ");
+        fitnessIntakeHeader.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
         fitnessIntakeHeader.setFont(Font.font("sans serif", FontWeight.BOLD, 40));
         fitnessIntakeDetails.setFont(Font.font("sans serif", 20));
+        fitnessIntakeDetails.setStyle("-fx-text-fill: white;");
+        fitnessIntakeDetails.styleProperty().set("-fx-padding: 1 5 1 5; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
+
+
 //        nameField.setStyle("-fx-font: normal bold 20px 'serif' ");
 //        ageField.setStyle("-fx-font: normal bold 20px 'serif' ");
+        //fitnessIntakeToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
 
-        fitnessIntakeToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-
+        String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
+        fitnessIntakeRoot.setStyle("-fx-background-image: url('" + image + "'); " +
+                "-fx-background-position: center center; " +
+                "-fx-background-repeat: stretch;" + "-fx-background-size: 800px 500px;" + "-fx-background-color:transparent");
 
     }
 
