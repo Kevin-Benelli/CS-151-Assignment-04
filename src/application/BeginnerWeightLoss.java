@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class BeginnerWeightLoss implements ExerciseInt{
     private String[] exerciseList = new String[10];
-    protected Label begWLheader = new Label("Your Exercises \n");
+    protected Label begWLheader = new Label("Weight Loss Workout - Beginner \n");
 
     VBox exerciseRoot = new VBox();
     Button backToFIPageBtn = new Button("Back to Fitness Intake Page");
@@ -34,6 +34,14 @@ public class BeginnerWeightLoss implements ExerciseInt{
         //fitnessIntakeDetails.setFont(Font.font("sans serif", 20));
 //        nameField.setStyle("-fx-font: normal bold 20px 'serif' ");
 //        ageField.setStyle("-fx-font: normal bold 20px 'serif' ");
+        begWLheader.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        begWLheader.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
+
+        String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
+        exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
+                "-fx-background-position: center center; " +
+                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
+
 
         backToFIPageBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
 
@@ -44,7 +52,7 @@ public class BeginnerWeightLoss implements ExerciseInt{
     public void listExercises() {
         generateRandomExercises();
         exerciseRoot.getChildren().clear();
-        exerciseRoot.getChildren().add(backToFIPageBtn);
+        exerciseRoot.getChildren().addAll(begWLheader, backToFIPageBtn);
 
         if(exerciseList.length > 0){
             // Lists Advanced workouts on Exercise Page

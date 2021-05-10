@@ -6,7 +6,4 @@
 <?import java.lang.String?>
 <GridPane fx:controller="application.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <stylesheets>
-        <String fx:value="/application/styles.css"/>
-    </stylesheets>
 </GridPane>

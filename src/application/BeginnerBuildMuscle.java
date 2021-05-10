@@ -13,7 +13,7 @@ public class BeginnerBuildMuscle implements ExerciseInt{
     private String[] exerciseList = new String[10];
 
     VBox exerciseRoot = new VBox();
-    Label begBMLabel = new Label("Muscle Building Workout - Beginner");
+    Label begBMLabel = new Label("Muscle Building Workout - Beginner \n");
     Button backToFIPageBtn = new Button("Back to Fitness Intake Page");
 
     public BeginnerBuildMuscle()
@@ -24,7 +24,7 @@ public class BeginnerBuildMuscle implements ExerciseInt{
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: stretch;" + "-fx-background-size: 800px 500px;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
 
     }
 
@@ -33,7 +33,7 @@ public class BeginnerBuildMuscle implements ExerciseInt{
         generateRandomExercises();
 
         exerciseRoot.getChildren().clear();
-        exerciseRoot.getChildren().add(backToFIPageBtn);
+        exerciseRoot.getChildren().addAll(begBMLabel, backToFIPageBtn);
         if(exerciseList.length > 0){
             // Lists Advanced workouts on Exercise Page
             for(String exercise : exerciseList) {

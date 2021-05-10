@@ -85,7 +85,7 @@ public class FitnessIntakePage {
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         fitnessIntakeRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: stretch;" + "-fx-background-size: 800px 500px;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
 
     }
 
