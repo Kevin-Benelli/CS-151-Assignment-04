@@ -2,6 +2,7 @@ package application;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -14,6 +15,7 @@ public final class ExercisePage {
     private final static String ADVANCED = "ADVANCED";
     private final static String BUILDMUSCLE = "BUILDMUSCLE";
     private final static String WEIGHTLOSS = "WEIGHTLOSS";
+
     private static Object exercisePageInstance = new ExercisePage();
 
 

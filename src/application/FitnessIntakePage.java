@@ -6,6 +6,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -34,8 +35,6 @@ public class FitnessIntakePage {
     protected Label fitnessIntakeHeader = new Label("Fitness Intake Page\n");
     protected Label fitnessIntakeDetails = new Label("Lets start by getting your personalized metrics\n");
     protected  VBox fitnessIntakeRoot = new VBox(20);
-
-
     /**
      * Initializing Constructor sets Fitness Intake page header style
      */
@@ -72,7 +71,7 @@ public class FitnessIntakePage {
         fitnessIntakeRoot.setAlignment(Pos.CENTER);
         fitnessIntakeHeader.setTextAlignment(TextAlignment.LEFT);
         fitnessIntakeHeader.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
-        fitnessIntakeHeader.setFont(Font.font("sans serif", FontWeight.BOLD, 40));
+        fitnessIntakeHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
         fitnessIntakeDetails.setFont(Font.font("sans serif", 20));
         fitnessIntakeDetails.setStyle("-fx-text-fill: white;");
         fitnessIntakeDetails.styleProperty().set("-fx-padding: 1 5 1 5; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
