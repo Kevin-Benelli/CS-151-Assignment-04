@@ -68,14 +68,17 @@ public class BeginnerWeightLoss implements ExerciseInt{
     }
 
     public void generateRandomExercises(){
-        int max = workouts.length;
+        int max = BeginnerWeightlossWorkouts.length;
         Random randInt = new Random();
-        int seed = randInt.nextInt(max);
-
+        int seed;
+        do {
+        	seed = randInt.nextInt(max);
+        } while(seed == 0);
+        
         for(int i = 0; i < 10; i++){
-            System.out.println(workouts[randInt.nextInt(seed)]);
+            //System.out.println(BeginnerWeightlossWorkouts[randInt.nextInt(seed)]);
             //Generate random int value from 1 to allWorkouts length
-            exerciseList[i] = workouts[randInt.nextInt(seed)];
+            exerciseList[i] = BeginnerWeightlossWorkouts[randInt.nextInt(seed)];
         }
     }
 }
