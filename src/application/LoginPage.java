@@ -75,25 +75,27 @@ public class LoginPage {
             System.out.println("username: " + userName + " | " + validCredentials[0] + "|" + "password: " + passWord + " | " + validCredentials[1] + "|");
             invalidCredentials.setText("");
         }else{
-	        	if (userName.equals("")&&!passWord.equals("")) {
-	        		invalidCredentials.setText("Please enter the Username.");
-	        		loginRoot.getChildren().add(invalidCredentials);
-	        	}
-	        	else if (passWord.equals("")&&!userName.equals(""))
-	        	{
-	        		invalidCredentials.setText("Please enter the Password.");
-	        		loginRoot.getChildren().add(invalidCredentials);
-	        	}
-	        	else if (userName.equals("")&&userName.equals(""))
-	        	{
-	        		invalidCredentials.setText("Please enter the Username and Password.");
-	        		loginRoot.getChildren().add(invalidCredentials);
-	        	}
-	            else {
-	            	invalidCredentials.setText("Invalid username or password.");
-	                loginRoot.getChildren().add(invalidCredentials);
-	            }
-	        }
+        	if (userName.equals("")&&!passWord.equals("")) {
+        		invalidCredentials.setText("Please enter the Username.");
+        	}
+        	else if (passWord.equals("")&&!userName.equals(""))
+        	{
+        		invalidCredentials.setText("Please enter the Password.");
+        	}
+        	else if (userName.equals("")&&userName.equals(""))
+        	{
+        		invalidCredentials.setText("Please enter the Username and Password.");
+    		}
+            else invalidCredentials.setText("Invalid username or password.");
+        	
+        	for (Node node : loginRoot.getChildren()) {
+    			if (node instanceof Text 
+    					&& ((Text) node).getText().equals(invalidCredentials.getText())) {
+    				return isCredentialValid;
+    			}
+    		}
+        	loginRoot.getChildren().add(invalidCredentials);
+        }
         invalidCredentials.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
         invalidCredentials.setFill(Color.WHITE);
         return isCredentialValid;
