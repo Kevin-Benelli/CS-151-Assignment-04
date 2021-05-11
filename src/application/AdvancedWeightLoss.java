@@ -42,14 +42,17 @@ public class AdvancedWeightLoss implements ExerciseInt{
     }
 
     public void generateRandomExercises(){
-        int max = allWorkouts.length;
+        int max = AdvancedWeightlossWorkouts.length;
         Random randInt = new Random();
-        int seed = randInt.nextInt(max);
-
+        int seed;
+        do {
+        	seed = randInt.nextInt(max);
+        } while(seed == 0);
+        
         for(int i = 0; i < 10; i++){
-            System.out.println(allWorkouts[randInt.nextInt(seed)]);
+            //System.out.println(AdvancedWeightlossWorkouts[randInt.nextInt(seed)]);
             //Generate random int value from 1 to allWorkouts length
-            exerciseList[i] = allWorkouts[randInt.nextInt(seed)];
+            exerciseList[i] = AdvancedWeightlossWorkouts[randInt.nextInt(seed)];
         }
     }
 }
