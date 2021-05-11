@@ -42,14 +42,18 @@ public class AdvancedBuildMuscle implements ExerciseInt {
     }
 
     public void generateRandomExercises(){
-        int max = workouts.length;
+        int max = AdvancedBuildMuscleWorkouts.length;
         Random randInt = new Random();
-
+        int seed;
+        do {
+        	seed = randInt.nextInt(max);
+        } while(seed == 0);
         for(int i = 0; i < 10; i++){
-            //Generate random int value from 1 to allWorkouts length
-            exerciseList[i] = workouts[randInt.nextInt(max)];
+        	 //System.out.println(AdvancedBuildMuscleWorkouts[randInt.nextInt(seed)]);
+             //Generate random int value from 1 to allWorkouts length
+             exerciseList[i] = AdvancedBuildMuscleWorkouts[randInt.nextInt(seed)];
+            }
         }
-    }
 
 
 }
