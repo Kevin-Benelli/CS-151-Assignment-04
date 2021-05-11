@@ -47,14 +47,18 @@ public class BeginnerBuildMuscle implements ExerciseInt{
     }
 
     public void generateRandomExercises(){
-        int max = workouts.length;
+        int max = BeginnerBuildMuscleWorkouts.length;
         Random randInt = new Random();
-        int seed = randInt.nextInt(max);
-
-        for(int i = 0; i < 10; i++){
-            System.out.println(workouts[randInt.nextInt(seed)]);
-            //Generate random int value from 1 to allWorkouts length
-            exerciseList[i] = workouts[randInt.nextInt(seed)];
+        int seed;
+        do {
+        	seed = randInt.nextInt(max);
+        } while(seed == 0);
+        if (randInt.nextInt(max)>0) {
+        	for(int i = 0; i < 10; i++){
+        		//System.out.println(BeginnerBuildMuscleWorkouts[randInt.nextInt(seed)]);
+        		//Generate random int value from 1 to allWorkouts length
+        		exerciseList[i] = BeginnerBuildMuscleWorkouts[randInt.nextInt(seed)];
+        	}
         }
     }
 }
