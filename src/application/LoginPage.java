@@ -75,12 +75,25 @@ public class LoginPage {
             System.out.println("username: " + userName + " | " + validCredentials[0] + "|" + "password: " + passWord + " | " + validCredentials[1] + "|");
             invalidCredentials.setText("");
         }else{
-            System.out.println(new Text("Invalid username password combination"));
-            if (invalidCredentials.getText().equals("")) {
-                invalidCredentials.setText("Invalid username password combination");
-                loginRoot.getChildren().add(invalidCredentials);
-            }
-        }
+	        	if (userName.equals("")&&!passWord.equals("")) {
+	        		invalidCredentials.setText("Please enter the Username.");
+	        		loginRoot.getChildren().add(invalidCredentials);
+	        	}
+	        	else if (passWord.equals("")&&!userName.equals( ""))
+	        	{
+	        		invalidCredentials.setText("Please enter the Password.");
+	        		loginRoot.getChildren().add(invalidCredentials);
+	        	}
+	        	else if (userName.equals("")&&userName.equals(""))
+	        	{
+	        		invalidCredentials.setText("Please enter the Username and Password.");
+	        		loginRoot.getChildren().add(invalidCredentials);
+	        	}
+	            else {
+	            	invalidCredentials.setText("Invalid username or password.");
+	                loginRoot.getChildren().add(invalidCredentials);
+	            }
+	        }
         invalidCredentials.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
         invalidCredentials.setFill(Color.WHITE);
         return isCredentialValid;
