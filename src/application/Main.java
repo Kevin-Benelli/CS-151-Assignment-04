@@ -118,7 +118,7 @@ public class Main extends Application {
             lgnPage.loginRoot.getChildren().addAll(lgnPage.loginLbl); // Setting Login page with login lbl and registration and login buttons
 
             // Create Registration Layout
-            regPage.registrationRoot.getChildren().addAll(regPage.registrationHeader, regPage.registrationToLoginBtn);
+            regPage.registrationRoot.getChildren().addAll(regPage.registrationHeader, regPage.registrationToLoginBtn, regPage.signupBtn);
 
             // Create Fitness Intake Layout
             FIPage.fitnessIntakeRoot.getChildren().addAll(FIPage.fitnessIntakeHeader, FIPage.fitnessIntakeDetails, FIPage.fitnessIntakeToLoginBtn, FIPage.exerciseBtn);
