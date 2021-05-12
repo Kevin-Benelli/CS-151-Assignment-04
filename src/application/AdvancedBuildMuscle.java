@@ -44,7 +44,7 @@ public class AdvancedBuildMuscle implements ExerciseInt {
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: repeat-y;" + "-fx-background-size: 900px 600px;");
 
     }
 
@@ -63,7 +63,7 @@ public class AdvancedBuildMuscle implements ExerciseInt {
                 "Work those hammies and glutes! This is the last one of the day!");
         listView.setItems(items);
         listView.setPrefWidth(800);
-        listView.setPrefHeight(500);
+        listView.setPrefHeight(2000);
 
         listView.setCellFactory(param -> new ListCell<String>() {
             private ImageView imageView = new ImageView();
@@ -75,23 +75,23 @@ public class AdvancedBuildMuscle implements ExerciseInt {
                     setGraphic(null);
                 } else {
                     if(name.equals("Keep the back nice and straight and a slight bend in the knees. All biceps baby!"))
-                        imageView.setImage(listOfImages[0]);
+                        imageView.setImage(listOfImages[8]);
                     else if(name.equals("The further away your feet are from the straps, the more difficult the exercise becomes. Challenge yourself!"))
-                        imageView.setImage(listOfImages[1]);
+                        imageView.setImage(listOfImages[7]);
                     else if(name.equals("Big pushes using those pecs!"))
-                        imageView.setImage(listOfImages[2]);
+                        imageView.setImage(listOfImages[6]);
                     else if(name.equals("Onto that back, allow those big lats to take over here. Remember, keep your feet nice and grounded!"))
-                        imageView.setImage(listOfImages[3]);
+                        imageView.setImage(listOfImages[5]);
                     else if(name.equals("Unleash that sculpted back!"))
                         imageView.setImage(listOfImages[4]);
                     else if(name.equals("Engage your core like it's a weapon. Lock it and keep it nice and firm with every rep."))
-                        imageView.setImage(listOfImages[5]);
+                        imageView.setImage(listOfImages[3]);
                     else if(name.equals("Bring in those legs and work that V. You know you want to."))
-                        imageView.setImage(listOfImages[6]);
+                        imageView.setImage(listOfImages[2]);
                     else if(name.equals("Now on to the lower body, alternate legs with every rep!"))
-                        imageView.setImage(listOfImages[7]);
+                        imageView.setImage(listOfImages[1]);
                     else if(name.equals("Work those hammies and glutes! This is the last one of the day!"))
-                        imageView.setImage(listOfImages[8]);
+                        imageView.setImage(listOfImages[0]);
                     setText(name);
                     setGraphic(imageView);
                 }

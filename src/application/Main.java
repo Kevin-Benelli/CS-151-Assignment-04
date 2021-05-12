@@ -142,13 +142,33 @@ public class Main extends Application {
             registrationScene = new Scene(regPage.registrationRoot, 400, 400);
             fitnessIntakeScene = new Scene(FIPage.fitnessIntakeRoot, 600, 600);
 
+            //Build Muscle Scenes
             beginnerBuildMuscleScene = new Scene(beginnerBuildMuscle.exerciseRoot, 600, 600);
+                window.setScene(beginnerBuildMuscleScene);
+                window.setHeight(1500);
+                window.setWidth(900);
             intermediateBuildMuscleScene = new Scene(intermediateBuildMuscle.exerciseRoot, 600, 600);
+                window.setScene(intermediateBuildMuscleScene);
+                window.setHeight(1500);
+                window.setWidth(900);
             advancedBuildMuscleScene = new Scene(advancedBuildMuscle.exerciseRoot, 600, 600);
+                window.setScene(advancedBuildMuscleScene);
+                window.setHeight(1500);
+                window.setWidth(900);
 
+                //Weight Loss Scenes
             beginnerWeightLossScene = new Scene(beginnerWeightLoss.exerciseRoot, 600, 600);
+                window.setScene(beginnerWeightLossScene);
+                window.setHeight(1500);
+                window.setWidth(900);
             intermediateWeightLossScene = new Scene(intermediateWeightLoss.exerciseRoot, 600, 600);
+                window.setScene(intermediateWeightLossScene);
+                window.setHeight(1500);
+                window.setWidth(900);
             advancedWeightLossScene = new Scene(advancedWeightLoss.exerciseRoot, 600, 600);
+                window.setScene(advancedWeightLossScene);
+                window.setHeight(1500);
+                window.setWidth(900);
 
             // Set first screen to login page
             window.setScene(loginPageScene);

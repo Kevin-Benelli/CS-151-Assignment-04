@@ -1,7 +1,10 @@
 package application;
 
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -43,7 +46,7 @@ public class IntermediateBuildMuscle implements ExerciseInt{
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: repeat-y;" + "-fx-background-size: 900px 600px;");
 
 
     }
@@ -62,7 +65,8 @@ public class IntermediateBuildMuscle implements ExerciseInt{
                 "Take out some swings in the mirror, but don't hit the mirror because the mirror will win.");
         listView.setItems(items);
         listView.setPrefWidth(800);
-        listView.setPrefHeight(500);
+        listView.setPrefHeight(2000);
+        //listView.setFixedCellSize(500);
 
         listView.setCellFactory(param -> new ListCell<String>() {
             private ImageView imageView = new ImageView();

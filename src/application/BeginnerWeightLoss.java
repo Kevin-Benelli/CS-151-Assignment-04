@@ -1,5 +1,6 @@
 package application;
 
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
@@ -18,6 +19,7 @@ import java.util.Random;
 
 public class BeginnerWeightLoss implements ExerciseInt{
 
+    private static final double LIST_CELL_HEIGHT = 6;
     //workout images
     private final Image pushups  = new Image("application/pictures/begWL/push-ups.jpeg");
     private final Image lungefrontkicks  = new Image("application/pictures/begWL/lungefrontkicks.jpeg");
@@ -56,7 +58,7 @@ public class BeginnerWeightLoss implements ExerciseInt{
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: repeat-y;" + "-fx-background-size: 900px 600px;");
 
 
         //backToFIPageBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
@@ -76,7 +78,7 @@ public class BeginnerWeightLoss implements ExerciseInt{
                 "Aim to get these done in 2 sets at most!" );
         listView.setItems(items);
         listView.setPrefWidth(800);
-        listView.setPrefHeight(500);
+        listView.setPrefHeight(2000);
 
         listView.setCellFactory(param -> new ListCell<String>() {
             private ImageView imageView = new ImageView();

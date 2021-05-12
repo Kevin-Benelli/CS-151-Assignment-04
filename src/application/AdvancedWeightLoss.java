@@ -45,7 +45,7 @@ public class AdvancedWeightLoss implements ExerciseInt{
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: repeat-y;" + "-fx-background-size: 900px 600px;");
 
     }
 
@@ -62,7 +62,7 @@ public class AdvancedWeightLoss implements ExerciseInt{
                 "Increase the weight by a pound here!" );
         listView.setItems(items);
         listView.setPrefWidth(800);
-        listView.setPrefHeight(500);
+        listView.setPrefHeight(2000);
 
         listView.setCellFactory(param -> new ListCell<String>() {
             private ImageView imageView = new ImageView();

@@ -51,7 +51,7 @@ public class LoginPage {
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         loginRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: stretch;" + "-fx-background-size: 900px 600px;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: repeat-y;" + "-fx-background-color:transparent");
     }
 
     /**
@@ -82,7 +82,7 @@ public class LoginPage {
             }
         }
         invalidCredentials.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
-        invalidCredentials.setFill(Color.WHITE);
+        invalidCredentials.setFill(Color.BLACK);
         return isCredentialValid;
     }
 }
