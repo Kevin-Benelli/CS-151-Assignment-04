@@ -7,6 +7,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.text.Font;
 
+import java.awt.*;
+
 public class RegistrationPage {
 
     private String[] registrationFields = new String[]{"Set Email: ", "Set Password: "};

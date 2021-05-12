@@ -18,15 +18,16 @@ import java.util.Random;
 public class IntermediateWeightLoss implements ExerciseInt{
 
     //workout images
-    private final Image legPress  = new Image("application/pictures/legpress.jpeg");
-    private final Image ddeadlifts  = new Image("application/pictures/ddeadlifts.jpeg");
-    private final Image lungeCurls  = new Image("application/pictures/lungeCurls.jpeg");
-    private final Image widelatPulls = new Image("application/pictures/widelatPulls.jpeg");
-    private final Image kbSquatSwing  = new Image("application/pictures/kbSquatSwing.jpeg");
-    private final Image downWoodChops  = new Image("application/pictures/downWoodChops.jpeg");
-    private final Image latShoulder  = new Image("application/pictures/latShoulder.jpeg");
-    private final Image declineBenchPress  = new Image("application/pictures/declineBenchPress.jpeg");
-    private Image[] listOfImages = {legPress, ddeadlifts, lungeCurls, widelatPulls, kbSquatSwing, downWoodChops, latShoulder, declineBenchPress};
+    private final Image dbchops  = new Image("application/pictures/intWL/dbchops.jpeg");
+    private final Image dblifts  = new Image("application/pictures/intWL/dblifts.jpeg");
+    private final Image declinebenchpress  = new Image("application/pictures/intWL/declinebenchpress.jpeg");
+    private final Image kbsquatswing = new Image("application/pictures/intWL/kbsquatswing.jpeg");
+    private final Image latdumbbellraises  = new Image("application/pictures/intWL/latdumbbellraises.jpeg");
+    private final Image latpulldowns  = new Image("application/pictures/intWL/latpulldowns.jpeg");
+    private final Image legpress  = new Image("application/pictures/intWL/legpress.jpeg");
+    private final Image lungehammercurls  = new Image("application/pictures/intWL/lungehammercurls.jpeg");
+    private final Image medicineballwc  = new Image("application/pictures/intWL/medicineballwc.jpeg");
+    private Image[] listOfImages = {dbchops, dblifts, declinebenchpress, kbsquatswing, latdumbbellraises, latpulldowns, legpress, lungehammercurls, medicineballwc};
 
 
     private String[] exerciseList = new String[10];
@@ -53,10 +54,18 @@ public class IntermediateWeightLoss implements ExerciseInt{
     public void listExercises() {
 
         ObservableList<String> items = FXCollections.observableArrayList (
-                "legPress", "ddeadlifts", "lungeCurls", "widelatPulls", "kbSquatSwing", "downWoodChops", "latShoulder", "declineBenchPress");
+                "Imagine you're chopping down a tree, but you're not because you're green!",
+                "Focus on your form with every rep. Bend your knees not your back and always keep your chin up!",
+                "Push-up power building. Feel a nice burn at the end of every set.",
+                "Swing that kettlebell! Watch your movement in the mirror and keep the motion continuous.",
+                "Having a slight bend at the knee prevents tension in the back. The bend is your friend.",
+                "We're working on getting you to pull-up power! Don't move too fast, control the bar down to your chest.",
+                "Take your time here to build up your weight, increase with every set if you can!",
+                "2.5 lbs per hand, 25 reps per leg. How quickly can you complete this exercise?",
+                "You're still chopping down that tree! Just with a ball now!");
         listView.setItems(items);
-        listView.setPrefWidth(900);
-        listView.setPrefHeight(600);
+        listView.setPrefWidth(800);
+        listView.setPrefHeight(500);
 
         listView.setCellFactory(param -> new ListCell<String>() {
             private ImageView imageView = new ImageView();
@@ -67,22 +76,24 @@ public class IntermediateWeightLoss implements ExerciseInt{
                     setText(null);
                     setGraphic(null);
                 } else {
-                    if(name.equals("legPress"))
+                    if(name.equals("Imagine you're chopping down a tree, but you're not because you're green!"))
                         imageView.setImage(listOfImages[0]);
-                    else if(name.equals("ddeadlifts"))
+                    else if(name.equals("Focus on your form with every rep. Bend your knees not your back and always keep your chin up!"))
                         imageView.setImage(listOfImages[1]);
-                    else if(name.equals("lungeCurls"))
+                    else if(name.equals("Push-up power building. Feel a nice burn at the end of every set."))
                         imageView.setImage(listOfImages[2]);
-                    else if(name.equals("widelatPulls"))
+                    else if(name.equals("Swing that kettlebell! Watch your movement in the mirror and keep the motion continuous."))
                         imageView.setImage(listOfImages[3]);
-                    else if(name.equals("kbSquatSwing"))
+                    else if(name.equals("Having a slight bend at the knee prevents tension in the back. The bend is your friend."))
                         imageView.setImage(listOfImages[4]);
-                    else if(name.equals("downWoodChops"))
+                    else if(name.equals("We're working on getting you to pull-up power! Don't move too fast, control the bar down to your chest."))
                         imageView.setImage(listOfImages[5]);
-                    else if(name.equals("latShoulder"))
+                    else if(name.equals("Take your time here to build up your weight, increase with every set if you can!"))
                         imageView.setImage(listOfImages[6]);
-                    else if(name.equals("declineBenchPress"))
+                    else if(name.equals("2.5 lbs per hand, 25 reps per leg. How quickly can you complete this exercise?"))
                         imageView.setImage(listOfImages[7]);
+                    else if(name.equals("You're still chopping down that tree! Just with a ball now!"))
+                        imageView.setImage(listOfImages[8]);
                     setText(name);
                     setGraphic(imageView);
                 }
