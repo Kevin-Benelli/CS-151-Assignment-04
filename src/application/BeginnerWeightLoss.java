@@ -52,7 +52,7 @@ public class BeginnerWeightLoss implements ExerciseInt{
         //fitnessIntakeDetails.setFont(Font.font("sans serif", 20));
 //        nameField.setStyle("-fx-font: normal bold 20px 'serif' ");
 //        ageField.setStyle("-fx-font: normal bold 20px 'serif' ");
-        begWLheader.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        begWLheader.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         begWLheader.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
 
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();

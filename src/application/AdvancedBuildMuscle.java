@@ -38,7 +38,7 @@ public class AdvancedBuildMuscle implements ExerciseInt {
     public AdvancedBuildMuscle()
     {
         exerciseRoot.setAlignment(Pos.CENTER);
-        advBMLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        advBMLabel.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         advBMLabel.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
 
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();

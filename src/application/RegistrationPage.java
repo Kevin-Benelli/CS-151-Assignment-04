@@ -27,7 +27,7 @@ public class RegistrationPage {
 
         registrationRoot.setAlignment(Pos.CENTER);
         registrationHeader.setFont(new Font(18));
-        registrationHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        registrationHeader.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         registrationHeader.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
 
         //background image

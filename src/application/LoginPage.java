@@ -39,7 +39,7 @@ public class LoginPage {
         loginRoot.setAlignment(Pos.CENTER);
         //loginRoot.styleProperty().set("-fx-background-image: url(\"pullups.jpeg\");");
         loginLbl.setFont(new Font(18));
-        loginLbl.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        loginLbl.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         loginLbl.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
         //loginLbl.setTextAlignment(TextAlignment.CENTER);
         emailField.setPromptText("email");

@@ -39,7 +39,7 @@ public class IntermediateWeightLoss implements ExerciseInt{
     public IntermediateWeightLoss()
     {
         exerciseRoot.setAlignment(Pos.CENTER);
-        intWLLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        intWLLabel.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         intWLLabel.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
 
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();

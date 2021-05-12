@@ -71,8 +71,8 @@ public class FitnessIntakePage {
         fitnessIntakeRoot.setAlignment(Pos.CENTER);
         fitnessIntakeHeader.setTextAlignment(TextAlignment.LEFT);
         fitnessIntakeHeader.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
-        fitnessIntakeHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
-        fitnessIntakeDetails.setFont(Font.font("sans serif", 20));
+        fitnessIntakeHeader.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
+        fitnessIntakeDetails.setFont(Font.font("Courier New", 20));
         fitnessIntakeDetails.setStyle("-fx-text-fill: white;");
         fitnessIntakeDetails.styleProperty().set("-fx-padding: 1 5 1 5; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
 

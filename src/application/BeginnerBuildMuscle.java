@@ -39,7 +39,7 @@ public class BeginnerBuildMuscle implements ExerciseInt{
     public BeginnerBuildMuscle()
     {
         exerciseRoot.setAlignment(Pos.CENTER);
-        begBMLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        begBMLabel.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         begBMLabel.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
 
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();

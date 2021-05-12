@@ -30,7 +30,7 @@ public class FitnessIntakePage {
      */
     public FitnessIntakePage(){
         //fitnessIntakeHeader.setFont(new Font(18));
-        fitnessIntakeHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        fitnessIntakeHeader.setFont(Font.font("Courier New", FontWeight.BOLD, 25));
         fitnessIntakeHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
         fitnessIntakeHeader.setTextAlignment(TextAlignment.LEFT);
         fitnessIntakeInfo.setFont(new Font(18));
