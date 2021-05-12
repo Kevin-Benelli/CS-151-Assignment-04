@@ -46,7 +46,7 @@ public class IntermediateBuildMuscle implements ExerciseInt{
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: repeat-y;" + "-fx-background-size: 900px 600px;");
+                "-fx-background-repeat: repeat;" + "-fx-background-size: 900px 600px;");
 
 
     }
@@ -64,7 +64,7 @@ public class IntermediateBuildMuscle implements ExerciseInt{
                 "Pick a weight to fail at 12 reps. Try not to take off, you winged creature of the night!",
                 "Take out some swings in the mirror, but don't hit the mirror because the mirror will win.");
         listView.setItems(items);
-        listView.setPrefWidth(800);
+        listView.setMaxWidth(1000);
         listView.setPrefHeight(2000);
         //listView.setFixedCellSize(500);
 

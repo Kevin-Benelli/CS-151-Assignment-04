@@ -44,7 +44,7 @@ public class AdvancedBuildMuscle implements ExerciseInt {
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: repeat-y;" + "-fx-background-size: 900px 600px;");
+                "-fx-background-repeat: repeat;" + "-fx-background-size: 900px 600px;");
 
     }
 
@@ -62,7 +62,7 @@ public class AdvancedBuildMuscle implements ExerciseInt {
                 "Now on to the lower body, alternate legs with every rep!",
                 "Work those hammies and glutes! This is the last one of the day!");
         listView.setItems(items);
-        listView.setPrefWidth(800);
+        listView.setMaxWidth(1000);
         listView.setPrefHeight(2000);
 
         listView.setCellFactory(param -> new ListCell<String>() {

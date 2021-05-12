@@ -58,7 +58,7 @@ public class BeginnerWeightLoss implements ExerciseInt{
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: repeat-y;" + "-fx-background-size: 900px 600px;");
+                "-fx-background-repeat: repeat;" + "-fx-background-size: 900px 600px;");
 
 
         //backToFIPageBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
@@ -77,7 +77,7 @@ public class BeginnerWeightLoss implements ExerciseInt{
                 "These will burn, but in a nice way :D ",
                 "Aim to get these done in 2 sets at most!" );
         listView.setItems(items);
-        listView.setPrefWidth(800);
+        listView.setMaxWidth(1000);
         listView.setPrefHeight(2000);
 
         listView.setCellFactory(param -> new ListCell<String>() {
