@@ -42,16 +42,16 @@ public class LoginPage {
         loginLbl.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         loginLbl.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
         //loginLbl.setTextAlignment(TextAlignment.CENTER);
-        emailField.setPromptText("email");
+        emailField.setPromptText("Username");
         emailField.setMaxWidth(300);
-        passwordField.setPromptText("password");
+        passwordField.setPromptText("Password");
         passwordField.setMaxWidth(300);
 
         //stackPane.getChildren().addAll(imageView, loginBtn);
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         loginRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: repeat-y;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: repeat;" + "-fx-background-color:transparent");
     }
 
     /**

@@ -12,7 +12,7 @@ import javafx.scene.text.Font;
 
 public class RegistrationPage {
 
-    private String[] registrationFields = new String[]{" Email: ", " Create New Password: "};
+    private String[] registrationFields = new String[]{" Create Username: ", " Create New Password: "};
 
     protected Button registrationToLoginBtn = new Button("Back to Login Page");
     protected Button registrationBtn = new Button("Register");
@@ -36,11 +36,11 @@ public class RegistrationPage {
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         registrationRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
-                "-fx-background-repeat: repeat-y;" + "-fx-background-color:transparent");
+                "-fx-background-repeat: repeat;" + "-fx-background-color:transparent");
 
-        regEmailField.setPromptText("email");
+        regEmailField.setPromptText("Create New Username: ");
         regEmailField.setMaxWidth(300);
-        regPasswordField.setPromptText("password");
+        regPasswordField.setPromptText("Create New Password: ");
         regPasswordField.setMaxWidth(300);
 
         /*registrationHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
