@@ -43,9 +43,9 @@ public class LoginPage {
         loginLbl.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
         //loginLbl.setTextAlignment(TextAlignment.CENTER);
         emailField.setPromptText("email");
-            emailField.setMaxWidth(300);
+        emailField.setMaxWidth(300);
         passwordField.setPromptText("password");
-            passwordField.setMaxWidth(300);
+        passwordField.setMaxWidth(300);
 
         //stackPane.getChildren().addAll(imageView, loginBtn);
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
@@ -68,10 +68,28 @@ public class LoginPage {
      * @return isCredentialValid Boolean
      */
     public boolean validateLoginAttempt(String userName, String passWord){
-        boolean isCredentialValid = false;
+//        boolean isCredentialValid = false;
+//
+//        if(userName.equals(validCredentials[0]) && passWord.equals(validCredentials[1])){
+//            isCredentialValid = true;
+//            System.out.println("username: " + userName + " | " + validCredentials[0] + "|" + "password: " + passWord + " | " + validCredentials[1] + "|");
+//            invalidCredentials.setText("");
+//        }else{
+//            System.out.println(new Text("Invalid username password combination"));
+//            if (invalidCredentials.getText().equals("")) {
+//                invalidCredentials.setText("Invalid username password combination");
+//                loginRoot.getChildren().add(invalidCredentials);
+//            }
+//        }
+//        invalidCredentials.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
+//        invalidCredentials.setFill(Color.BLACK);
+//        return isCredentialValid;
+//
 
-        if(userName.equals(validCredentials[0]) && passWord.equals(validCredentials[1])){
-            isCredentialValid = true;
+        Controller controller = new Controller();
+        boolean isCredentialValid = controller.verifyLogin(userName, passWord);
+
+        if(isCredentialValid){
             System.out.println("username: " + userName + " | " + validCredentials[0] + "|" + "password: " + passWord + " | " + validCredentials[1] + "|");
             invalidCredentials.setText("");
         }else{
@@ -83,6 +101,9 @@ public class LoginPage {
         }
         invalidCredentials.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
         invalidCredentials.setFill(Color.BLACK);
+
         return isCredentialValid;
     }
+
+
 }

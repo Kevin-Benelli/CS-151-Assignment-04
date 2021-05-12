@@ -19,6 +19,8 @@ public class RegistrationPage {
     protected Label registrationHeader = new Label("Registration Page - Sign Up Now! \n");
     protected VBox registrationRoot = new VBox(20);
     protected Button signupBtn = new Button("Sign Up!");
+    protected TextField regEmailField = new TextField();
+    protected TextField regPasswordField = new TextField();
 
     /**
      * Initializing Constructor sets Registration page header style
@@ -36,6 +38,11 @@ public class RegistrationPage {
                 "-fx-background-position: center center; " +
                 "-fx-background-repeat: repeat-y;" + "-fx-background-color:transparent");
 
+        regEmailField.setPromptText("email");
+        regEmailField.setMaxWidth(300);
+        regPasswordField.setPromptText("password");
+        regPasswordField.setMaxWidth(300);
+
         /*registrationHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
         registrationHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
         registrationHeader.setTextAlignment(TextAlignment.LEFT);
@@ -48,12 +55,13 @@ public class RegistrationPage {
      * List all Registration field names on Registration Page
      */
     public void listFieldNames(){
-        for(String exercise : registrationFields){
-            TextField exerciseTextField = new TextField();
-            exerciseTextField.setPromptText(exercise);
-            registrationRoot.getChildren().add(exerciseTextField);
-            exerciseTextField.setMaxWidth(300);
-        }
+        registrationRoot.getChildren().addAll(regEmailField, regPasswordField);
+    }
+
+
+    public void registerUser(String usrn, String pass){
+        Controller controller = new Controller();
+        controller.registerUser(usrn, pass);
     }
 
 }

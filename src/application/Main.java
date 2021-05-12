@@ -23,15 +23,6 @@ public class Main extends Application {
             window.setWidth(900);
             window.setHeight(600);
 
-            /* TODO:
-              1.) ADD METHODS FOR:
-                 a.) Create master list of all exercises and choose first 10 for each array/bin (beg, inter, adv) Rand num generator to generate new list
-                 b.) FITNESS INTAKE CALCULATIONS
-                 c.) MAPPING TO SPECIFIC WORKOUT REGIMES
-                 d.) REGISTER USER METHOD
-                 e.) CLEAR INPUT ONCLICK FOR BACK TO LOGIN BUTTON
-            */
-
             // Instantiate Login, Registration, Fitness Intake, and Exercise Pages
             LoginPage lgnPage = new LoginPage();
             RegistrationPage regPage = new RegistrationPage();
@@ -48,12 +39,12 @@ public class Main extends Application {
                 String userName = lgnPage.emailField.getText();
                 String userPass = lgnPage.passwordField.getText();
                 lgnPage.loginRoot.getChildren().getClass();
-                Boolean isCredentialValid = lgnPage.validateLoginAttempt(userName, userPass);
+                boolean isCredentialValid = lgnPage.validateLoginAttempt(userName, userPass);
                 if(isCredentialValid){
                     window.setScene(fitnessIntakeScene);
                 }
-
             });
+
 
             // Sets event listeners for fitness, registration, and exercise btns
             FIPage.fitnessIntakeToLoginBtn.setOnAction(event -> window.setScene(loginPageScene));
@@ -68,7 +59,7 @@ public class Main extends Application {
 
             regPage.registrationBtn.setOnAction(event -> window.setScene(registrationScene));
 
-
+//            regPage.
             FIPage.fitnessGoalsField.setOnAction(event ->{
                 FIPage.setFitnessGoalValue();
             });
@@ -103,6 +94,14 @@ public class Main extends Application {
                     window.setScene(customWorkoutScene);
                 }
 
+            });
+
+            regPage.signupBtn.setOnAction(event -> {
+                System.out.println(regPage.regEmailField.getText() + " | " + regPage.regPasswordField.getText());
+                if(regPage.regEmailField.getText().length() > 0 && regPage.regPasswordField.getText().length() > 0){
+                    regPage.registerUser(regPage.regEmailField.getText(), regPage.regPasswordField.getText());
+                    window.setScene(loginPageScene);
+                }
             });
 
             // Create Exercise Layout
