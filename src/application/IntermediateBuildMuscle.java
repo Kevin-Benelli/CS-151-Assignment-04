@@ -42,13 +42,10 @@ public class IntermediateBuildMuscle implements ExerciseInt{
         exerciseRoot.setAlignment(Pos.CENTER);
         intBMLabel.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         intBMLabel.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
-
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
                 "-fx-background-repeat: repeat;" + "-fx-background-size: 900px 600px;");
-
-
     }
 
     @Override
@@ -66,8 +63,6 @@ public class IntermediateBuildMuscle implements ExerciseInt{
         listView.setItems(items);
         listView.setMaxWidth(1000);
         listView.setPrefHeight(2000);
-        //listView.setFixedCellSize(500);
-
         listView.setCellFactory(param -> new ListCell<String>() {
             private ImageView imageView = new ImageView();
             @Override
@@ -99,8 +94,6 @@ public class IntermediateBuildMuscle implements ExerciseInt{
             }
         });
 
-        //generateRandomExercises();
-
         exerciseRoot.getChildren().clear();
         exerciseRoot.getChildren().addAll(intBMLabel, backToFIPageBtn, listView);
         // Lists Advanced workouts on Exercise Page
@@ -114,7 +107,6 @@ public class IntermediateBuildMuscle implements ExerciseInt{
         int seed = randInt.nextInt(max);
 
         for(int i = 0; i < 10; i++){
-            //System.out.println(workouts[randInt.nextInt(seed)]);
             //Generate random int value from 1 to allWorkouts length
             exerciseList[i] = workouts[randInt.nextInt(seed)];
         }

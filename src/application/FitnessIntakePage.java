@@ -19,10 +19,6 @@ public class FitnessIntakePage {
 
     private String fitnessLevel = "Select Fitness Level";
     private String fitnessGoal = "Select Fitness Goal";
-
-    private String[] fitnessIntake = new String[]{"Name: ", "Age: ", "Fitness level: ", "Goals: "};
-//    protected TextField nameField = new TextField();
-//    protected TextField ageField = new TextField();
     protected ComboBox fitnessLevelField;
     protected ObservableList<String> fitnessLevelFieldOptions;
 
@@ -46,8 +42,6 @@ public class FitnessIntakePage {
     }
 
     private void setInitialFieldStates(){
-//        nameField.setPromptText("Name");
-//        ageField.setPromptText("Age");
         fitnessLevelFieldOptions = FXCollections.observableArrayList(
                 "Beginner",
                 "Intermediate",
@@ -75,12 +69,6 @@ public class FitnessIntakePage {
         fitnessIntakeDetails.setFont(Font.font("Courier New", 20));
         fitnessIntakeDetails.setStyle("-fx-text-fill: white;");
         fitnessIntakeDetails.styleProperty().set("-fx-padding: 1 5 1 5; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
-
-
-//        nameField.setStyle("-fx-font: normal bold 20px 'serif' ");
-//        ageField.setStyle("-fx-font: normal bold 20px 'serif' ");
-        //fitnessIntakeToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         fitnessIntakeRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
@@ -91,7 +79,6 @@ public class FitnessIntakePage {
      * List all Fitness Intake field names on Fitness Intake Page
      */
     public void listFieldNames(){
-//        fitnessIntakeRoot.getChildren().addAll(nameField, ageField, fitnessLevelField, fitnessGoalsField);
         fitnessIntakeRoot.getChildren().addAll(fitnessLevelField, fitnessGoalsField);
     }
 
@@ -113,36 +100,12 @@ public class FitnessIntakePage {
         return fitnessGoal;
     }
 
-//    /**
-//     * Fitness Level ComboBox
-//     */
-//    public void fitLevel(){
-//        //fitnessIntakeRoot.getChildren().add(new Label("Select Fitness Level:"));
-//        //fitnessIntakeRoot.getChildren().add(comboBox);
-//        ComboBox<Level> comboBox = new ComboBox<Level>();
-//        ObservableList<Level> list = LevelList.getLevelList();
-//
-//        comboBox.setItems(list);
-//        comboBox.getSelectionModel().select(1);
-//
-//        //fitnessIntakeRoot.setPadding(new Insets(5));
-//        //fitnessIntakeRoot.setHgap(5);
-//
-//        fitnessIntakeRoot.getChildren().add(new Label("Select Fitness Level:"));
-//        fitnessIntakeRoot.getChildren().add(comboBox);
-//
-//    }
-
-
     private final static String BEGINNER = "BEGINNER";
     private final static String INTERMEDIATE = "INTERMEDIATE";
     private final static String ADVANCED = "ADVANCED";
     private final static String BUILDMUSCLE = "BUILDMUSCLE";
     private final static String WEIGHTLOSS = "WEIGHTLOSS";
     private String[] customWorkout = new String[2];
-
-    protected Button exerciseToLoginBtn = new Button("Back to Login Page");
-    protected Label exercisePageHeader = new Label("Your Exercises");
     protected VBox exerciseRoot = new VBox();
 
 
@@ -189,11 +152,7 @@ public class FitnessIntakePage {
                 exerciseRoot.getChildren().add(new Label(exercise));
             }
         }
-
-
-
     }
-
 }
 
 

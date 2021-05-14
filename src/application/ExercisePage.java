@@ -44,16 +44,9 @@ public final class ExercisePage {
         exercisePageHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
         exercisePageHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
         exercisePageHeader.setTextAlignment(TextAlignment.CENTER);
-
-//        generateWorkoutPlan();
     }
 
     public void generateWorkoutPlan(String goal, String level) {
-//        FitnessIntakePage fitnessIntakePage = new FitnessIntakePage();
-//
-//        goal = FIPage.getFitnessGoal().toUpperCase();
-//        level = FIPage.getFitnessLevel().toUpperCase();
-//
         System.out.println(goal + "  |  " + level);
         customWorkout = new String[beginnerMuscleWorkouts.length];
 
@@ -83,7 +76,6 @@ public final class ExercisePage {
      */
     public void listExercises(){
         if(customWorkout.length > 0){
-            //String fitnessLevel = fitnessLevelField.getText();
             // Lists Beginner workouts on Exercise Page
             for(String exercise : customWorkout) {
                 exerciseRoot.getChildren().add(new Label(exercise));

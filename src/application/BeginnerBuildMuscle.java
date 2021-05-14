@@ -46,7 +46,6 @@ public class BeginnerBuildMuscle implements ExerciseInt{
         exerciseRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
                 "-fx-background-repeat: repeat;" + "-fx-background-size: 900px 600px;");
-
     }
 
     @Override
@@ -110,7 +109,6 @@ public class BeginnerBuildMuscle implements ExerciseInt{
                 exerciseRoot.getChildren().add(new Label(exercise));
             }
         }
-//        this.exerciseRoot = exerciseRoot;
 
         //styles
         exerciseRoot.setAlignment(Pos.CENTER);
@@ -122,7 +120,7 @@ public class BeginnerBuildMuscle implements ExerciseInt{
         int seed = randInt.nextInt(max);
 
         for(int i = 0; i < 10; i++){
-            //System.out.println(workouts[randInt.nextInt(seed)]);
+
             //Generate random int value from 1 to allWorkouts length
             exerciseList[i] = workouts[randInt.nextInt(seed)];
         }

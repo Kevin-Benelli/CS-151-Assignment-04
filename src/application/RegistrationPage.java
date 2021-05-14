@@ -6,14 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 import javafx.scene.text.Font;
 
 public class RegistrationPage {
-
-    private String[] registrationFields = new String[]{" Create Username: ", " Create New Password: "};
-
     protected Button registrationToLoginBtn = new Button("Back to Login Page");
     protected Button registrationBtn = new Button("Register");
     protected Label registrationHeader = new Label("Registration Page - Sign Up Now! \n");
@@ -43,12 +38,6 @@ public class RegistrationPage {
         regPasswordField.setPromptText("Create New Password: ");
         regPasswordField.setMaxWidth(300);
 
-        /*registrationHeader.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
-        registrationHeader.styleProperty().set("-fx-padding: 30; -fx-background-color: #88BDC4;");
-        registrationHeader.setTextAlignment(TextAlignment.LEFT);
-        registrationHeader.setStyle("-fx-font: normal bold 20px 'serif' ");
-        //registrationBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-        registrationToLoginBtn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");*/
     }
 
     /**

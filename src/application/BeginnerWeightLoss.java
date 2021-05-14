@@ -106,8 +106,6 @@ public class BeginnerWeightLoss implements ExerciseInt{
                 }
             }
         });
-
-        //generateRandomExercises();
         exerciseRoot.getChildren().clear();
         exerciseRoot.getChildren().addAll(begWLheader, backToFIPageBtn, listView);
 
@@ -130,7 +128,6 @@ public class BeginnerWeightLoss implements ExerciseInt{
         int seed = randInt.nextInt(max);
 
         for(int i = 0; i < 10; i++){
-            //System.out.println(workouts[randInt.nextInt(seed)]);
             //Generate random int value from 1 to allWorkouts length
             exerciseList[i] = workouts[randInt.nextInt(seed)];
         }

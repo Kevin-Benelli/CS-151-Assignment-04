@@ -8,10 +8,6 @@ import javafx.scene.control.Label;
 
 public interface ExerciseInt {
 
-        //loading images
-        //public final Image cabinetImage  = new Image("Cab.png");
-
-
         VBox exerciseRoot = new VBox();
         Button BackToFIPageBtn = new Button("Back to Fitness Intake Page");
         Label exercisePageHeader = new Label("Your Exercises");
@@ -32,10 +28,6 @@ public interface ExerciseInt {
                 "Exercise93","Exercise94","Exercise95","Exercise96","Exercise97","Exercise98",
                 "Exercise99","Exercise100"};
 
-        //String[] begWL = {""}
-
-        //String[] begWorkouts = {"100 Jumping Jacks","40 Lunges","40 Squats","100 High Knees", "40 Butt Kickers", "20 Side Lunges", "10 Leg Lifts", "100 Crunches", "30 second sprint", "10 minute cycling"};
-        //String[] intWorkouts = {"100 Jumping Jacks","40 Lunges","40 Squats","100 High Knees", "40 Butt Kickers", "20 Side Lunges", "10 Leg Lifts", "100 Crunches", "30 second sprint", "10 minute cycling"};
         /**
          * List all Fitness Intake field names on Fitness Intake Page
          */

@@ -26,28 +26,18 @@ public class LoginPage {
     protected VBox loginRoot = new VBox(20); // spaces 20 px to avoid crowding
     protected Button loginBtn = new Button("Login");
 
-    //stackpane to add background image
-   /* protected StackPane stackPane = new StackPane();
-    protected Image image = new Image(getClass().getResourceAsStream("/application/pullups.jpeg"));
-    protected ImageView imageView = new ImageView(image);
-    protected Button loginBtn = new Button("Login");*/
-
     /**
      * Initializing Constructor sets Login page header style
      */
     public LoginPage(){
         loginRoot.setAlignment(Pos.CENTER);
-        //loginRoot.styleProperty().set("-fx-background-image: url(\"pullups.jpeg\");");
         loginLbl.setFont(new Font(18));
         loginLbl.setFont(Font.font("Courier New", FontWeight.BOLD, 30));
         loginLbl.styleProperty().set("-fx-padding: 30 50 30 50; -fx-background-color: #A0DEE7; -fx-text-alignment: center;");
-        //loginLbl.setTextAlignment(TextAlignment.CENTER);
         emailField.setPromptText("Username");
         emailField.setMaxWidth(300);
         passwordField.setPromptText("Password");
         passwordField.setMaxWidth(300);
-
-        //stackPane.getChildren().addAll(imageView, loginBtn);
         String image = LoginPage.class.getResource("pictures/background.jpeg").toExternalForm();
         loginRoot.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
@@ -68,24 +58,6 @@ public class LoginPage {
      * @return isCredentialValid Boolean
      */
     public boolean validateLoginAttempt(String userName, String passWord){
-//        boolean isCredentialValid = false;
-//
-//        if(userName.equals(validCredentials[0]) && passWord.equals(validCredentials[1])){
-//            isCredentialValid = true;
-//            System.out.println("username: " + userName + " | " + validCredentials[0] + "|" + "password: " + passWord + " | " + validCredentials[1] + "|");
-//            invalidCredentials.setText("");
-//        }else{
-//            System.out.println(new Text("Invalid username password combination"));
-//            if (invalidCredentials.getText().equals("")) {
-//                invalidCredentials.setText("Invalid username password combination");
-//                loginRoot.getChildren().add(invalidCredentials);
-//            }
-//        }
-//        invalidCredentials.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
-//        invalidCredentials.setFill(Color.BLACK);
-//        return isCredentialValid;
-//
-
         Controller controller = new Controller();
         boolean isCredentialValid = controller.verifyLogin(userName, passWord);
 
@@ -104,6 +76,4 @@ public class LoginPage {
 
         return isCredentialValid;
     }
-
-
 }
